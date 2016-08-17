@@ -1,0 +1,6 @@
+GitlabCIMultiRunner:
+  image: gitlab/gitlab-runner:v1.1.0
+  volumes:
+    - /home/docker/compose/gitlab-runner/Assets/data:/etc/gitlab-runner
+    - /run/docker.sock:/var/run/docker.sock
+  restart: always

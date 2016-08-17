@@ -1,0 +1,15 @@
+ concurrent = 1
+ 
+ [[runners]]
+   name = "runner2"
+   url = "http://gitlab.com/ci"
+   token = ""
+   executor = "docker"
+   [runners.docker]
+     tls_verify = false
+     image = "node:4.5.0"
+     privileged = false
+     disable_cache = false
+     volumes = ["/cache"]
+   [runners.cache]
+     Insecure = false
